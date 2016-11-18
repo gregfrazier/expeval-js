@@ -1,4 +1,5 @@
 var evaluator = function(str, scope){
+	scope = scope || {};
 	var valueStack = [], operStack = [],
 		e = { '+': function(y,x){ return x + y; }, '-': function(y,x){ return x - y; }, '*': function(y,x){ return x * y; }, '/': function(y,x){ return x / y; } },
 		prec = function(op1, op2){ return (op2 == '(' || op2 == ')') || ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-')) ? false : true; }, 
