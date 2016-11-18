@@ -36,3 +36,8 @@ evaluator('two * 1 + 5', { two: '2' });
 
 output: 7
 ```
+
+Supports operators:
+```
+ + - * / ! ( )
+```
